@@ -28,7 +28,7 @@ def main():
 
             i = input()
             getCar(i)
-            flag = True #flag variable learned from CS50 Duck
+            flag = True 
             while flag:
                 choose = input("\nHere are your next choices (Please Type the Number): \n"
                 "1: Analyse the Saved Vehicle(s)\n" \
@@ -71,7 +71,7 @@ def getCar(i):
     else:
         print(f"You picked a {cars[i][1]} {cars[i][2]}")
         response = requests.get("https://www.fueleconomy.gov/ws/rest/vehicle/" + cars[i][0])
-        data = xmltodict.parse(response.text) #code from CS50 Duck Debugger
+        data = xmltodict.parse(response.text) 
         print(
             "Here are the stats: \n"
             f"MSRP (USD): {cars[i][3]} \n"
@@ -197,3 +197,4 @@ def comparefiles(numlist):
 
 if __name__ == "__main__":
     main()
+
